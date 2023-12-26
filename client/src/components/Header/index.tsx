@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="items-center w-full flex flex-row justify-between px-32 h-28">
-      <div>Logo Goes Here</div>
+      <Link href="/">Logo Goes Here</Link>
 
       <nav>
         <ul className="flex flex-row gap-16">
