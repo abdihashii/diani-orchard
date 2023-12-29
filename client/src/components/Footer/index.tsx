@@ -10,7 +10,8 @@ const Footer = () => {
 
   return (
     <footer className="min-h-[420px] w-full bg-black text-white">
-      <section className="h-2/3 flex flex-grow gap-28 px-32 py-20">
+      {/* Top section */}
+      <section className="h-2/3 flex flex-grow gap-28 px-32 py-20 xl:justify-center">
         {/* Diani Orchard Excerpt */}
         <article className="w-64 flex flex-col gap-3">
           <h2 className="text-3xl font-semibold">Diani Orchard</h2>

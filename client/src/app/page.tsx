@@ -60,7 +60,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="grid grid-cols-3 gap-12 px-32 py-28">
+      <section className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 gap-12 px-32 py-28">
         {rooms.map((room) => (
           <article className="flex flex-col shadow-lg" key={room.id}>
             {/* Image container with aspect ratio */}
