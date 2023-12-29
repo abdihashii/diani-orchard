@@ -49,17 +49,18 @@ export default function Home() {
 				{/* BG Overlay */}
 				<div className="absolute inset-0 bg-[#7C6A46] bg-opacity-50"></div>
 
-				<article className="z-30 flex w-1/2 flex-col items-center gap-12 text-center text-white">
+				<article className="z-30 flex flex-col items-center gap-12 text-center text-white lg:w-1/2 xl:w-1/3 xl:gap-16">
 					<h1 className="text-6xl font-bold">Rooms and Suites</h1>
 					<p className="text-xl">
 						The elegant luxury bedrooms in this gallery showcase custom interior
 						designs & decorating ideas. View pictures and find your perfect
 						luxury bedroom design.
 					</p>
-					<ArrowDownCircle size={84} className="animate-bounce" />
+					<ArrowDownCircle size={84} className="mt-4 animate-bounce" />
 				</article>
 			</section>
 
+			{/* Rooms section */}
 			<section className="grid grid-cols-1 gap-12 px-32 py-28 lg:grid-cols-3 xl:grid-cols-4">
 				{rooms.map((room) => (
 					<article className="flex flex-col shadow-lg" key={room.id}>
