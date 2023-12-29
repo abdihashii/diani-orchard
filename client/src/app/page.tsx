@@ -92,7 +92,9 @@ export default function Home() {
 									<Wifi className="text-[#EE7536]" height={32} />
 								</div>
 
-								<Button>Book now</Button>
+								<Button className="bg-[#22A6EF] hover:bg-[#EE7536]">
+									Book now
+								</Button>
 							</div>
 						</div>
 					</article>
