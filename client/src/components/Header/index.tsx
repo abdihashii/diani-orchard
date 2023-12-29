@@ -25,7 +25,7 @@ const Header = () => {
       </div>
 
       <nav className="flex-1 justify-center">
-        <ul className="flex flex-row gap-16">
+        <ul className="flex flex-row gap-16 justify-between">
           <li
             className={`${
               pathname === '/'
