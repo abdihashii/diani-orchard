@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Home() {
 	return (
 		<main className="">
@@ -19,6 +21,51 @@ export default function Home() {
 						designs & decorating ideas. View pictures and find your perfect
 						luxury bedroom design.
 					</p>
+				</article>
+			</section>
+
+			{/* About section */}
+			<section className="mx-auto flex w-full flex-row justify-center gap-12 border border-purple-500 px-32 py-28">
+				<article className="flex w-1/3 flex-col gap-5 border border-purple-500">
+					<p>Image goes here</p>
+					<p>Abdirahman Haji (Manager)</p>
+				</article>
+
+				<article className="w-1/3">
+					The United Nations is an international organization founded in 1945.
+					Currently made up of 193 Member States, the UN and its work are guided
+					by the purposes and principles contained in its founding Charter. The
+					UN has evolved over the years to keep pace with a rapidly changing
+					world. But one thing has stayed the same: it remains the one place on
+					Earth where all the world&apos;s nations can gather together, discuss
+					common problems, and find shared solutions that benefit all of
+					humanity. The Secretary-General is Chief Administrative Officer of the
+					UN &mdash; and is also a symbol of the Organization&apos;s ideals and
+					an advocate for all the world&apos;s peoples, especially the poor and
+					vulnerable. The Secretary-General is appointed by the General Assembly
+					on the recommendation of the Security Council for a 5-year, renewable
+					term. The current Secretary-General, and the 9th occupant of the post,
+					is António Guterres of Portugal, who took office on 1 January 2017. On
+					the 18th of June, 2021, Guterres was re-appointed to a second term,
+					pledging as his priority to continue helping the world chart a course
+					out of the COVID-19 pandemic. The United Nations is an international
+					organization founded in 1945. Currently made up of 193 Member States,
+					the UN and its work are guided by the purposes and principles
+					contained in its founding Charter. The UN has evolved over the years
+					to keep pace with a rapidly changing world. But one thing has stayed
+					the same: it remains the one place on Earth where all the world&apos;s
+					nations can gather together, discuss common problems, and find shared
+					solutions that benefit all of humanity. The Secretary-General is Chief
+					Administrative Officer of the UN &mdash; and is also a symbol of the
+					Organization&apos;s ideals and an advocate for all the world&apos;s
+					peoples, especially the poor and vulnerable. The Secretary-General is
+					appointed by the General Assembly on the recommendation of the
+					Security Council for a 5-year, renewable term. The current
+					Secretary-General, and the 9th occupant of the post, is António
+					Guterres of Portugal, who took office on 1 January 2017. On the 18th
+					of June, 2021, Guterres was re-appointed to a second term, pledging as
+					his priority to continue helping the world chart a course out of the
+					COVID-19 pandemic.
 				</article>
 			</section>
 		</main>
