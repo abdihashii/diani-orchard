@@ -30,16 +30,16 @@ const Footer = () => {
 
 					<ul className="flex flex-col gap-3 font-medium">
 						<li className="text-xs">
-							<Link href="/">Book</Link>
+							<Link href="/book">Book</Link>
 						</li>
 						<li className="text-xs">
-							<Link href="/">Rooms</Link>
+							<Link href="/rooms">Rooms</Link>
 						</li>
 						<li className="text-xs">
-							<Link href="/">Contact</Link>
+							<Link href="/contact">Contact</Link>
 						</li>
 						<li className="text-xs">
-							<Link href="/">Explore</Link>
+							<Link href="/explore">Explore</Link>
 						</li>
 					</ul>
 				</article>
