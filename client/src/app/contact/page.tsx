@@ -23,7 +23,7 @@ export default function ContactPage() {
 			</section>
 
 			{/* Contact section */}
-			<section className="mx-auto w-full gap-36 border border-purple-500 px-32 py-28">
+			<section className="mx-auto w-full gap-36 px-32 py-28">
 				<form className="flex flex-col gap-9 text-black">
 					<div className="grid w-full grid-cols-2 gap-5">
 						<div className="flex flex-col gap-3">
@@ -61,11 +61,24 @@ export default function ContactPage() {
 
 					<button
 						type="submit"
-						className="rounded-md bg-[#7C6A46] px-10 py-5 text-white"
+						className="rounded-md bg-[#EE7536] bg-[#] px-10 py-5 text-white transition-colors hover:bg-[#22A6EF]"
 					>
 						Send
 					</button>
 				</form>
+			</section>
+
+			{/* Map section */}
+			<section className="w-full">
+				<iframe
+					className="w-full"
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15915.028095690845!2d39.5908551!3d-4.267411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184047c1b0ddf711%3A0xdb53247d7e0c42de!2sDiani%20Orchard!5e0!3m2!1sen!2sus!4v1703910068307!5m2!1sen!2sus"
+					height="500"
+					style={{ border: 0 }}
+					allowFullScreen={false}
+					loading="lazy"
+					referrerPolicy="no-referrer-when-downgrade"
+				></iframe>
 			</section>
 		</main>
 	);
