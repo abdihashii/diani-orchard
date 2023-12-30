@@ -25,10 +25,22 @@ export default function Home() {
 			</section>
 
 			{/* About section */}
-			<section className="mx-auto flex w-full flex-row justify-center gap-12 border border-purple-500 px-32 py-28">
-				<article className="flex w-1/3 flex-col gap-5 border border-purple-500">
-					<p>Image goes here</p>
-					<p>Abdirahman Haji (Manager)</p>
+			<section className="mx-auto flex w-full flex-row justify-center gap-36 px-32 py-28">
+				<article className="flex w-1/3 flex-col items-center">
+					<div className="relative h-5/6 w-full">
+						<Image
+							src="/room.jpeg"
+							layout="fill"
+							objectFit="cover"
+							alt="Abdirahman Haji (Manager)"
+						/>
+					</div>
+
+					<div className="flex h-1/6 w-full items-center justify-center">
+						<p className="text-center text-3xl font-semibold">
+							Abdirahman Haji (Manager)
+						</p>
+					</div>
 				</article>
 
 				<article className="w-1/3">

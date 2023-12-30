@@ -65,7 +65,7 @@ export default function Home() {
 				{rooms.map((room) => (
 					<article className="flex flex-col shadow-lg" key={room.id}>
 						{/* Image container with aspect ratio */}
-						<div className="aspect-w-16 aspect-h-9 relative w-full">
+						<div className="relative w-full">
 							<Image
 								src="/room_2.jpeg"
 								alt="Room"
