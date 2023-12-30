@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-// import { usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
-	// const pathname = usePathname();
+	const pathname = usePathname();
 
 	return (
 		<footer className="min-h-[420px] w-full bg-black text-white">
@@ -29,16 +29,40 @@ const Footer = () => {
 					<h2 className="font-semibold">Quick Links</h2>
 
 					<ul className="flex flex-col gap-3 font-medium">
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/book' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/book">Book</Link>
 						</li>
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/rooms' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/rooms">Rooms</Link>
 						</li>
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/contact' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/contact">Contact</Link>
 						</li>
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/explore' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/explore">Explore</Link>
 						</li>
 					</ul>
@@ -49,16 +73,40 @@ const Footer = () => {
 					<h2 className="font-semibold">Company</h2>
 
 					<ul className="flex flex-col gap-3 font-medium">
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/privacy-policy' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/privacy-policy">Privacy Policy</Link>
 						</li>
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/refund-policy' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/refund-policy">Refund Policy</Link>
 						</li>
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/faq' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/faq">F.A.Q</Link>
 						</li>
-						<li className="text-xs">
+						<li
+							className={`text-xs ${
+								pathname === '/about' ?
+									'font-bold text-[#EE7536]'
+								:	'font-medium text-white transition-colors hover:text-[#22A6EF]'
+							}`}
+						>
 							<Link href="/about">About</Link>
 						</li>
 					</ul>
