@@ -23,8 +23,9 @@ export default function ContactPage() {
 			</section>
 
 			{/* Contact section */}
-			<section className="mx-auto w-full gap-36 px-32 py-28">
+			<section className="mx-auto w-full gap-36 px-32 py-28 lg:w-1/2">
 				<form className="flex flex-col gap-9 text-black">
+					{/* Name and email form sections */}
 					<div className="grid w-full grid-cols-2 gap-5">
 						<div className="flex flex-col gap-3">
 							<label htmlFor="name">Name</label>
@@ -49,6 +50,7 @@ export default function ContactPage() {
 						</div>
 					</div>
 
+					{/* Message form section */}
 					<div className="flex h-80 flex-col gap-3">
 						<label htmlFor="message">Message</label>
 						<textarea
