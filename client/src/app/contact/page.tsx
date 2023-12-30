@@ -1,3 +1,5 @@
+import ContactForm from '@/components/Contact/ContactForm';
+
 export default function ContactPage() {
 	return (
 		<main className="">
@@ -24,50 +26,7 @@ export default function ContactPage() {
 
 			{/* Contact section */}
 			<section className="mx-auto w-full gap-36 px-32 py-28 lg:w-1/2">
-				<form className="flex flex-col gap-9 text-black">
-					{/* Name and email form sections */}
-					<div className="grid w-full grid-cols-2 gap-5">
-						<div className="flex flex-col gap-3">
-							<label htmlFor="name">Name</label>
-							<input
-								type="text"
-								name="name"
-								id="name"
-								className="border border-[#1C1C1C] px-5 py-6"
-								placeholder="Enter your name"
-							/>
-						</div>
-
-						<div className="flex flex-col gap-3">
-							<label htmlFor="email">Email</label>
-							<input
-								type="email"
-								name="email"
-								id="email"
-								className="border border-[#1C1C1C] px-5 py-6"
-								placeholder="Enter your email"
-							/>
-						</div>
-					</div>
-
-					{/* Message form section */}
-					<div className="flex h-80 flex-col gap-3">
-						<label htmlFor="message">Message</label>
-						<textarea
-							name="message"
-							id="message"
-							className="h-full border border-[#1C1C1C] px-5 py-6"
-							placeholder="Enter your message"
-						/>
-					</div>
-
-					<button
-						type="submit"
-						className="rounded-md bg-[#EE7536] bg-[#] px-10 py-5 text-white transition-colors hover:bg-[#22A6EF]"
-					>
-						Send
-					</button>
-				</form>
+				<ContactForm />
 			</section>
 
 			{/* Map section */}
