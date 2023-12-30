@@ -65,7 +65,7 @@ const Header = () => {
 					<li
 						className={`${
 							pathname === '/contact' ?
-								'font-medium text-[#EE7536]'
+								'font-bold text-[#EE7536]'
 							:	'font-medium text-black transition-colors hover:text-[#22A6EF]'
 						}`}
 					>
