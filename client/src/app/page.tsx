@@ -155,6 +155,61 @@ export default function Home() {
 					</div>
 				</article>
 			</section>
+
+			{/* Rooms section */}
+			<section
+				className="relative flex h-full w-full flex-col justify-center gap-20 bg-cover bg-center bg-no-repeat py-12 text-white"
+				style={{
+					backgroundImage: 'url(/rooms_section.jpeg)',
+				}}
+			>
+				{/* BG Overlay */}
+				<div className="absolute inset-0 bg-[#7C6A46] bg-opacity-80"></div>
+
+				<article className="z-30 space-y-4 text-center">
+					<h2 className="text-[50px]">Luxurious Rooms</h2>
+					<hr className="mx-auto w-1/12 border-4 border-white" />
+					<p>All rooms are designed for your comfort</p>
+				</article>
+
+				<article className="z-30 mx-auto grid w-10/12 grid-cols-3 gap-x-16 text-black">
+					<div className="aspect-w-1 aspect-h-1 rounded-xl bg-white p-7">
+						<Image
+							src="/room.jpeg"
+							fill={true}
+							objectFit="cover"
+							alt="room"
+							className="rounded-xl"
+						/>
+
+						<p className="flex-shrink-0 text-center">
+							Television set, Extra Sheets and Breakfast
+						</p>
+					</div>
+
+					<div className="aspect-w-1 aspect-h-1 rounded-xl bg-white p-7">
+						<Image
+							src="/room.jpeg"
+							fill={true}
+							objectFit="cover"
+							alt="room"
+							className="rounded-xl"
+						/>
+						<p>Television set, Extra Sheets and Breakfast</p>
+					</div>
+
+					<div className="aspect-w-1 aspect-h-1 rounded-xl bg-white">
+						<Image
+							src="/room.jpeg"
+							fill={true}
+							objectFit="cover"
+							alt="room"
+							className="rounded-xl"
+						/>
+						<p>Television set, Extra Sheets and Breakfast</p>
+					</div>
+				</article>
+			</section>
 		</main>
 	);
 }
