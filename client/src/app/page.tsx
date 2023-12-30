@@ -1,4 +1,14 @@
-import { PlayCircle } from 'lucide-react';
+import {
+	AirVent,
+	ParkingSquare,
+	PartyPopper,
+	PlayCircle,
+	Refrigerator,
+	ShowerHead,
+	Tv,
+	Waves,
+	Wifi,
+} from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -92,6 +102,56 @@ export default function Home() {
 						<Button className="bg-diani-orange hover:bg-diani-blue ml-auto h-full px-14">
 							Book now
 						</Button>
+					</div>
+				</article>
+			</section>
+
+			{/* Facilities section */}
+			<section className="mx-auto w-10/12 space-y-32 py-32">
+				<article className="space-y-3 text-center">
+					<h2 className="text-[40px]">Our Facilities</h2>
+					<p>We offer modern (5 star) facilities for your comfort</p>
+				</article>
+
+				<article className="grid grid-cols-4 gap-x-12 gap-y-56">
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<Wifi size={55} />
+						WiFi
+					</div>
+
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<ParkingSquare size={55} />
+						Free Parking
+					</div>
+
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<AirVent size={55} />
+						Air conditioning
+					</div>
+
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<Waves size={55} />
+						Shared swimming pool
+					</div>
+
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<PartyPopper size={55} />
+						Shared gazebo and party area
+					</div>
+
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<Tv size={55} />
+						TV with cable in Gazebo
+					</div>
+
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<ShowerHead size={55} />
+						Poolside shower
+					</div>
+
+					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+						<Refrigerator size={55} />
+						Shared, full-sized kitchen in lounge
 					</div>
 				</article>
 			</section>
