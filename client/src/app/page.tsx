@@ -1,6 +1,7 @@
-import { ArrowDownCircle, ShowerHead, Tv, Wifi } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const rooms = [
 	{
@@ -40,65 +41,59 @@ export default function Home() {
 		<main className="">
 			{/* Hero section */}
 			<section
-				className="relative flex h-full w-full items-center justify-center bg-cover bg-center bg-no-repeat"
+				className="relative mx-auto flex h-full w-10/12 items-center justify-between lg:gap-6"
 				style={{
-					backgroundImage: 'url(/room.jpeg)',
 					height: 'calc(100vh - 7rem)', // 7rem is the height of the header
 				}}
 			>
-				{/* BG Overlay */}
-				<div className="absolute inset-0 bg-[#7C6A46] bg-opacity-50"></div>
+				{/* Text and Image parts of the hero seciton */}
+				<article className="flex h-full w-full items-center justify-between">
+					{/* Left side */}
+					<div className="flex w-1/4 flex-col gap-12">
+						<h1 className="text-diani-orange text-6xl font-semibold">
+							Diani Orchard
+						</h1>
+						<h2 className="text-[55px] font-bold text-[#1C1C1C]">
+							Hotel for every moment rich in emotion
+						</h2>
+						<p>Every moment feels like the first time</p>
 
-				<article className="z-30 flex flex-col items-center gap-12 text-center text-white lg:w-1/2 xl:w-1/3 xl:gap-16">
-					<h1 className="text-6xl font-bold">Rooms and Suites</h1>
-					<p className="text-xl">
-						The elegant luxury bedrooms in this gallery showcase custom interior
-						designs & decorating ideas. View pictures and find your perfect
-						luxury bedroom design.
-					</p>
-					<ArrowDownCircle size={84} className="mt-4 animate-bounce" />
+						<div className="flex h-14 flex-row gap-10">
+							<Button className="bg-diani-orange hover:bg-diani-blue h-full rounded-full px-7 text-xl">
+								Book Now
+							</Button>
+							<Link
+								href="/rooms"
+								className="group flex flex-row items-center gap-4 text-xl"
+							>
+								<PlayCircle
+									className="text-diani-blue group-hover:text-diani-orange transition-colors"
+									size={55}
+								/>{' '}
+								Take a tour
+							</Link>
+						</div>
+					</div>
+
+					{/* Right side */}
+					<div className="relative h-full w-1/2">
+						<Image src="/home.jpeg" fill={true} objectFit="cover" alt="home" />
+					</div>
 				</article>
-			</section>
 
-			{/* Rooms section */}
-			<section className="grid grid-cols-1 gap-12 px-32 py-28 lg:grid-cols-3 xl:grid-cols-4">
-				{rooms.map((room) => (
-					<article className="flex flex-col shadow-lg" key={room.id}>
-						{/* Image container with aspect ratio */}
-						<div className="relative w-full">
-							<Image
-								src="/room_2.jpeg"
-								alt="Room"
-								layout="responsive"
-								width={160} // these should match the aspect ratio you want
-								height={90}
-								objectFit="cover"
-							/>
-						</div>
-
-						{/* Text content */}
-						<div className="flex flex-grow flex-col justify-between">
-							{/* Middle section */}
-							<div className="flex flex-col gap-3 px-4 py-3">
-								<h2 className="text-2xl">{room.name}</h2>
-								<p className="text-xl">{room.price}</p>
-							</div>
-
-							{/* Bottom section */}
-							<div className="flex flex-row items-center justify-between border-t border-t-[#EE7536] px-4 py-3">
-								<div className="flex flex-row space-x-2">
-									<Tv className="text-[#EE7536]" height={32} />
-									<ShowerHead className="text-[#EE7536]" height={32} />
-									<Wifi className="text-[#EE7536]" height={32} />
-								</div>
-
-								<Button className="bg-[#22A6EF] hover:bg-[#EE7536]">
-									Book now
-								</Button>
-							</div>
-						</div>
-					</article>
-				))}
+				{/* Booking on bottom, should be absolute positioned */}
+				<article
+					className="absolute bottom-10 h-[120px] w-full bg-white"
+					style={{
+						padding: 'inherit',
+					}}
+				>
+					<div className="flex h-full w-full flex-row justify-between px-9 py-7">
+						<Button className="bg-diani-orange hover:bg-diani-blue ml-auto h-full px-14">
+							Book now
+						</Button>
+					</div>
+				</article>
 			</section>
 		</main>
 	);
