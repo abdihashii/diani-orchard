@@ -63,7 +63,7 @@ export default function Home() {
 								Book Now
 							</Button>
 							<Link
-								href="/rooms"
+								href="/explore"
 								className="group flex flex-row items-center gap-4 text-xl"
 							>
 								<PlayCircle
