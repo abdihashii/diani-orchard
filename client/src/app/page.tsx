@@ -12,6 +12,7 @@ import {
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import BookingForm from '@/components/Booking/BookingForm';
 
 const rooms = [
 	{
@@ -51,58 +52,54 @@ export default function Home() {
 		<main className="">
 			{/* Hero section */}
 			<section
-				className="relative mx-auto flex h-full w-10/12 items-center justify-between lg:gap-6"
+				className="bg-[#FFF7F5]"
 				style={{
 					height: 'calc(100vh - 7rem)', // 7rem is the height of the header
 				}}
 			>
-				{/* Text and Image parts of the hero seciton */}
-				<article className="flex h-full w-full items-center justify-between">
-					{/* Left side */}
-					<div className="flex w-1/4 flex-col gap-12">
-						<h1 className="text-diani-orange text-6xl font-semibold">
-							Diani Orchard
-						</h1>
-						<h2 className="text-[55px] font-bold text-[#1C1C1C]">
-							Hotel for every moment rich in emotion
-						</h2>
-						<p>Every moment feels like the first time</p>
+				<article className="relative mx-auto flex h-full w-10/12 items-center justify-between lg:gap-6">
+					{/* Text and Image parts of the hero seciton */}
+					<div className="flex h-full w-full justify-between">
+						{/* Left side */}
+						<div className="flex h-fit flex-col gap-12">
+							<h1 className="text-6xl font-semibold text-diani-orange">
+								Diani Orchard
+							</h1>
+							<h2 className="text-[55px] font-bold text-[#1C1C1C]">
+								Hotel for every moment rich in emotion
+							</h2>
+							<p>Every moment feels like the first time</p>
 
-						<div className="flex h-14 flex-row gap-10">
-							<Button className="bg-diani-orange hover:bg-diani-blue h-full rounded-full px-7 text-xl">
-								Book Now
-							</Button>
-							<Link
-								href="/explore"
-								className="group flex flex-row items-center gap-4 text-xl"
-							>
-								<PlayCircle
-									className="text-diani-blue group-hover:text-diani-orange transition-colors"
-									size={55}
-								/>{' '}
-								Take a tour
-							</Link>
+							<div className="flex h-14 flex-row gap-10">
+								<Button className="h-full rounded-full bg-diani-orange px-7 text-xl hover:bg-diani-blue">
+									Book Now
+								</Button>
+								<Link
+									href="/explore"
+									className="group flex flex-row items-center gap-4 text-xl"
+								>
+									<PlayCircle
+										className="text-diani-blue transition-colors group-hover:text-diani-orange"
+										size={55}
+									/>{' '}
+									Take a tour
+								</Link>
+							</div>
+						</div>
+
+						{/* Right side */}
+						<div className="relative h-full w-1/2">
+							<Image
+								src="/home.jpeg"
+								fill={true}
+								objectFit="cover"
+								alt="home"
+							/>
 						</div>
 					</div>
 
-					{/* Right side */}
-					<div className="relative h-full w-1/2">
-						<Image src="/home.jpeg" fill={true} objectFit="cover" alt="home" />
-					</div>
-				</article>
-
-				{/* Booking on bottom, should be absolute positioned */}
-				<article
-					className="absolute bottom-10 h-[120px] w-full bg-white"
-					style={{
-						padding: 'inherit',
-					}}
-				>
-					<div className="flex h-full w-full flex-row justify-between px-9 py-7">
-						<Button className="bg-diani-orange hover:bg-diani-blue ml-auto h-full px-14">
-							Book now
-						</Button>
-					</div>
+					{/* Booking on bottom, should be absolute positioned */}
+					<BookingForm rooms={rooms} />
 				</article>
 			</section>
 
@@ -114,42 +111,42 @@ export default function Home() {
 				</article>
 
 				<article className="grid grid-cols-4 gap-x-12 gap-y-56">
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<Wifi size={55} />
 						WiFi
 					</div>
 
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<ParkingSquare size={55} />
 						Free Parking
 					</div>
 
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<AirVent size={55} />
 						Air conditioning
 					</div>
 
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<Waves size={55} />
 						Shared swimming pool
 					</div>
 
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<PartyPopper size={55} />
 						Shared gazebo and party area
 					</div>
 
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<Tv size={55} />
 						TV with cable in Gazebo
 					</div>
 
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<ShowerHead size={55} />
 						Poolside shower
 					</div>
 
-					<div className="text-diani-orange flex flex-col items-center gap-6 text-xl">
+					<div className="flex flex-col items-center gap-6 text-xl text-diani-orange">
 						<Refrigerator size={55} />
 						Shared, full-sized kitchen in lounge
 					</div>
@@ -173,7 +170,7 @@ export default function Home() {
 				</article>
 
 				<article className="z-30 mx-auto grid w-10/12 grid-cols-3 gap-x-16 text-black">
-					<div className="aspect-w-1 aspect-h-1 rounded-xl bg-white p-7">
+					<div className="aspect-h-1 aspect-w-1 rounded-xl bg-white p-7">
 						<Image
 							src="/room.jpeg"
 							fill={true}
@@ -187,7 +184,7 @@ export default function Home() {
 						</p>
 					</div>
 
-					<div className="aspect-w-1 aspect-h-1 rounded-xl bg-white p-7">
+					<div className="aspect-h-1 aspect-w-1 rounded-xl bg-white p-7">
 						<Image
 							src="/room.jpeg"
 							fill={true}
@@ -198,7 +195,7 @@ export default function Home() {
 						<p>Television set, Extra Sheets and Breakfast</p>
 					</div>
 
-					<div className="aspect-w-1 aspect-h-1 rounded-xl bg-white">
+					<div className="aspect-h-1 aspect-w-1 rounded-xl bg-white">
 						<Image
 							src="/room.jpeg"
 							fill={true}
