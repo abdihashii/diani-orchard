@@ -4,6 +4,9 @@ import React from 'react';
 import useBookings from '@/hooks/useBookings';
 
 import { Button } from '../ui/button';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { Database } from '@/types/database.types';
+import { string } from 'zod';
 
 const BookingForm = ({
 	rooms,
@@ -15,8 +18,50 @@ const BookingForm = ({
 		available: boolean;
 	}[];
 }) => {
+	const supabase = createClientComponentClient<Database>();
+
 	const { booking, handleChange, handleCheckInChange, handleCheckOutChange } =
 		useBookings();
+
+	// Add a booking to the database
+	const addBooking = async (fascadeBookingData: {
+		room: string;
+		numberOfGuests: number;
+		checkIn: string;
+		checkOut: string;
+	}) => {
+		try {
+			const updatedRoom = fascadeBookingData.room
+				.toLowerCase()
+				.replace(/\s/g, '-');
+
+			const { data: block_name, error: blockError } = await supabase
+				.from('blocks')
+				.select('*')
+				.eq('block_name', updatedRoom)
+				.single();
+
+			if (blockError) throw blockError;
+
+			const bookingData = {
+				guest_name: 'Test User',
+				block_name: block_name.block_name,
+				num_guests: fascadeBookingData.numberOfGuests,
+				check_in_date: fascadeBookingData.checkIn,
+				check_out_date: fascadeBookingData.checkOut,
+			};
+
+			const { error } = await supabase.from('bookings').insert([bookingData]);
+
+			if (error) throw error;
+
+			alert('Booking added successfully');
+		} catch (error) {
+			console.log(error);
+
+			alert('Error adding booking');
+		}
+	};
 
 	return (
 		<div
@@ -66,7 +111,10 @@ const BookingForm = ({
 					/>
 				</div>
 
-				<Button className="h-full bg-diani-orange px-14 hover:bg-diani-blue">
+				<Button
+					className="h-full bg-diani-orange px-14 hover:bg-diani-blue"
+					onClick={() => addBooking(booking)}
+				>
 					Book now
 				</Button>
 			</div>
