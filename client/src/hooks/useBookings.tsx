@@ -21,7 +21,7 @@ const useBookings = () => {
 		checkOut: string;
 	}>({
 		room: 'Block A',
-		numberOfGuests: 4,
+		numberOfGuests: 2,
 		checkIn: format(nowInNairobi, 'yyyy-MM-dd', {
 			timeZone: nairobiTimeZone,
 		}),
