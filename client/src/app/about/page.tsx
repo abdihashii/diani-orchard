@@ -29,9 +29,9 @@ export default function AboutPage() {
 				<article className="flex w-1/3 flex-col items-center">
 					<div className="relative h-5/6 w-full">
 						<Image
+							className="object-cover"
 							src="/room.jpeg"
 							layout="fill"
-							objectFit="cover"
 							alt="Abdirahman Haji (Manager)"
 						/>
 					</div>

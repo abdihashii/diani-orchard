@@ -67,12 +67,12 @@ export default function RoomsPage() {
 						{/* Image container with aspect ratio */}
 						<div className="relative w-full">
 							<Image
+								className="object-cover"
 								src="/room_2.jpeg"
 								alt="Room"
 								layout="responsive"
 								width={160} // these should match the aspect ratio you want
 								height={90}
-								objectFit="cover"
 							/>
 						</div>
 

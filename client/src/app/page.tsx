@@ -62,7 +62,7 @@ export default function Home() {
 					<div className="flex h-full w-full justify-between">
 						{/* Left side */}
 						<div className="flex h-fit flex-col gap-12">
-							<h1 className="text-6xl font-semibold text-diani-orange">
+							<h1 className="mt-8 text-6xl font-semibold text-diani-orange">
 								Diani Orchard
 							</h1>
 							<h2 className="text-[55px] font-bold text-[#1C1C1C]">
@@ -90,9 +90,9 @@ export default function Home() {
 						{/* Right side */}
 						<div className="relative h-full w-1/2">
 							<Image
+								className="object-cover"
 								src="/home.jpeg"
 								fill={true}
-								objectFit="cover"
 								alt="home"
 							/>
 						</div>
@@ -172,11 +172,10 @@ export default function Home() {
 				<article className="z-30 mx-auto grid w-10/12 grid-cols-3 gap-x-16 text-black">
 					<div className="aspect-h-1 aspect-w-1 rounded-xl bg-white p-7">
 						<Image
+							className="rounded-xl object-cover"
 							src="/room.jpeg"
 							fill={true}
-							objectFit="cover"
 							alt="room"
-							className="rounded-xl"
 						/>
 
 						<p className="flex-shrink-0 text-center">
@@ -186,22 +185,20 @@ export default function Home() {
 
 					<div className="aspect-h-1 aspect-w-1 rounded-xl bg-white p-7">
 						<Image
+							className="rounded-xl object-cover"
 							src="/room.jpeg"
 							fill={true}
-							objectFit="cover"
 							alt="room"
-							className="rounded-xl"
 						/>
 						<p>Television set, Extra Sheets and Breakfast</p>
 					</div>
 
 					<div className="aspect-h-1 aspect-w-1 rounded-xl bg-white">
 						<Image
+							className="rounded-xl object-cover"
 							src="/room.jpeg"
 							fill={true}
-							objectFit="cover"
 							alt="room"
-							className="rounded-xl"
 						/>
 						<p>Television set, Extra Sheets and Breakfast</p>
 					</div>

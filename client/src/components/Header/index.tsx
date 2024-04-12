@@ -15,10 +15,10 @@ const Header = () => {
 				<Link href="/" className="relative mr-auto w-44">
 					<div>
 						<Image
+							className="object-contain"
 							src="/diani_orchard.png"
 							alt="Go to the home page"
 							fill={true}
-							objectFit="contain"
 						/>
 					</div>
 				</Link>
